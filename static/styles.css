@@ -26,22 +26,6 @@ h1 {
     margin: 0 auto 10px;
 }
 
-.image-left, .image-right {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px;
-    height: 200px;
-}
-
-.image-left {
-    left: 100px;
-}
-
-.image-right {
-    right: 100px;
-}
-
 .buy-button {
     display: inline-block;
     padding: 10px 20px;
