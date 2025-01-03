@@ -1,5 +1,6 @@
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <h1>RISEWELL PRESENTS</h1>
@@ -10,5 +11,39 @@
 
 </body>
 <footer>
-    <p>�� 2025 Risewell Supplemets LLC. All rights reserved.</p>
+    <p>2025 Risewell Supplemets LLC. All rights reserved.</p>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function adjustForMobile() {
+            const width = window.innerWidth;
+
+            // Adjust font size for mobile screens
+            if (width <= 768) { // Typical breakpoint for tablets and phones
+                document.body.style.fontSize = "16px";
+                document.body.style.padding = "10px";
+            } else {
+                document.body.style.fontSize = "18px";
+                document.body.style.padding = "20px";
+            }
+
+            // Adjust button sizes
+            const buttons = document.querySelectorAll(".buy-button");
+            buttons.forEach(button => {
+                if (width <= 768) {
+                    button.style.padding = "8px 16px";
+                    button.style.fontSize = "14px";
+                } else {
+                    button.style.padding = "10px 20px";
+                    button.style.fontSize = "16px";
+                }
+            });
+        }
+
+        // Run the function on page load and resize
+        adjustForMobile();
+        window.addEventListener("resize", adjustForMobile);
+    });
+</script>
+
